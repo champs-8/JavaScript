@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        div#corpo{
+            border: 2px solid black;
+            border-bottom: 1px solid black;
+            text-align: center;
+            padding-bottom: 10px;
+            padding-top: 0px;
+            background-color: rgb(168, 160, 160);
+            width: 400px;
+            height: 125px;
+        }
+        div#res{
+            width: 400px;
+            height: 80px;
+            padding-top: 15px;
+            padding-bottom: 0px;
+            text-align: center;
+            border: 2px solid black;
+            border-top: 1px solid black;
+            background-color: rgb(168,160,160);
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+        <h1>Sistema de Nacionalidade</h1>
+        <p><label for="nac">País: </label>
+                <input type="text" id="nac"> &nbsp;<input type="button" value="Descobrir" onclick="nac()"></p>
+    </div>
+    <div id="res">
+
+    </div>
+</body>
+<script>
+    function nac(){
+        var País=document.querySelector('input#nac')
+        var nac=String(País.value)
+        var res=document.querySelector('div#res')
+        var PrimCarac=nac.slice(0,1)
+        var PrimCarcMaiu=PrimCarac.toUpperCase()
+        var RestoString=nac.slice(1)
+        var Maius=PrimCarcMaiu+RestoString
+        res.innerHTML=`Sua nacionalidade é do país ${Maius}.<br/>`
+        if(Maius=='Brasil'){
+            res.innerHTML+=`Você é um(a) brasileiro(a)!`
+        }else{
+            res.innerHTML+=`<h4>Você é um puto playboy de outro país que não é foda.</h4>`
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,72 @@
+@charset "UTF-8";
+body{
+    background:linear-gradient(0.9turn,rgb(247, 121, 121),rgb(110, 167, 253))no-repeat;
+    font: normal 15pt arial;
+    height: 100vh
+}
+header{
+    color: white;
+    text-align: center;
+}
+header h1{
+    text-shadow: 1px 1px 1px black;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+div#numeroDiv input#numero{
+    width: 60px;
+    box-shadow: .1px .1px 3px black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+div#numeroDiv input#troca-real-inteiro, input#descobrir{
+    margin-left: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+div#selecionados{
+    margin-top: 10px;
+    text-align: center;
+}
+div#separar{
+    text-align: center;
+    margin-top: 15px;
+}
+div.numerica{
+    display:inline-table;
+    width: 80px;
+    border: 1px black solid;
+
+}
+footer{
+    text-align: center;
+    width: 175px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding-top: 10px;
+    text-shadow: 1px 1px 1px black;
+    animation: digit 3s steps(25), 4s alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+}
+@keyframes digit{
+    from{
+        width: 0;
+    }
+}
+footer img{
+    height: 20px;
+    padding-top:4px;
+    position: relative;
+    color: white;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}

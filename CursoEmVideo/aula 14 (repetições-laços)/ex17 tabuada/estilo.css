@@ -1,0 +1,62 @@
+@charset "UTF-8";
+body{
+    background:linear-gradient(0.9turn,rgb(247, 121, 121),rgb(110, 167, 253))no-repeat;
+    font: normal 15pt arial;
+    height:590px;
+}
+header{
+    color: white;
+    text-align: center;
+}
+header h1{
+    text-shadow: 1px 1px 1px black;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+/*----------------DIVs-----------*/
+#num{
+    width: 90px;
+    border-radius: 7px;
+    font-size: 10pt;
+    text-align: center;
+}
+#valores{
+    margin-top: 10px;
+}
+#esquerda{
+    display: inline-block;
+    width: 200px;
+    text-align:center;
+    margin-left: 15px;
+}
+#direita{
+    display: inline-block;
+    width: 200px;
+    margin-left:58px;
+    text-align: center;
+}
+/*-------------------------------*/
+#calcular{
+    background-color: rgb(247, 121, 121,0.3);
+    border-radius: 7px;
+    margin-left: 5px;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding-top: 10px;
+    text-shadow: 1px 1px 1px black;
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "sf": "^0.2.0",
+    "ytdl-core": "^4.11.0"
+  }
+}

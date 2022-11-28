@@ -1,0 +1,193 @@
+javascript- o guia definitivo
+javascript- guia do programador
+gia de referecencia da mozila e do ecma
+
+--------------------------------------------------------------------------------------------
+aprender typeof number, string, boolean
+--------------------------------------------------------------------------------------------
+
+Number.parseInt(n) converte para inteiro
+Number.parseFloat(n) converte para real
+number(n) JS decide
+--------------------------------------------------------------------------------------------
+
+String(n) converte para string
+n.toString() converte para string
+--------------------------------------------------------------------------------------------
+
+template string se usa crash `${}`
+--------------------------------------------------------------------------------------------
+
+var s=JavaScript
+s.length// quantos caracteres
+s.UpperCase()//passa para maiusculas
+s.LowerCase()//passa para minusclas
+--------------------------------------------------------------------------------------------
+var number().toFixed(x)replace('.',',') trocar ponto por virgula em numero
+--------------------------------------------------------------------------------------------
+n1.toLocaleString('pt-BR',{style: 'currency', currency:'BRL'}): transformar valor em monetario
+--------------------------------------------------------------------------------------------
+    5+2=7				n=n+4 -> n+=4 -> n++
+    5-2=3				n=n-5 -> n-=5 -> n--
+    5*2=10				n=n*4 -> n*=4
+    5/2=2.5				n=n/2 -> n/=2
+    5%2=1 resto da divisao inteira	n=n%5 -> n%=5
+    5**2=25 potencia			n=n**2-> n**=2
+-------------------------------------------------------------------
+OPERADORES RELACIONAIS (resultado booleano)
+5>2 true
+7<4 false
+8>=8 true
+9<= false
+5==5 true
+4!=4 false(nao igual ou diferente)
+--------------------------------------------------------------------
+OPERADORES DE IDENTIDADE
+5=='5' true(number e  string pode ser verdadeiro para o JS)
+5==='5'false(precisa ter valor e tipo identicos)
+--------------------------------------------------------------------
+OPERADORES LOGICOS
+!-> negação (true ou false)
+!true== false
+!false== true
+
+&&-> conjunção (e)
+true&&true==true
+true&&false==false
+false&&false==false
+false&&true==false
+
+||-> disjunção (ou)
+true||true==true
+true||false== true
+false||true== true
+false||false== false
+--------------------------------------------------------------------------------------------
+OPERADOR TERNARIO
+?: ->teste?true:false
+ex: media>=7.0?"Aprovado":"Reprovado"
+--------------------------------------------------------------------------------------------
+ARVORE DOM
+
+começa pela raiz(window)
+dentro do window tem o location== localizacao do site
+document== documento atual
+history== vai guardando de onde veio e para onde vai
+
+PARA NAVEGAR NA ARVORE DOM
+por marca
+por ID
+por nome
+por classe
+por seletor ->querySelector(utiliza a sintaxe do css)
+--------------------------------------------------------------------------------------------
+EVENTOS COM MOUSE
+mouseenter-> curso dentro do elemento
+mousemove-> mover dentro do elemento
+mousedown-> clicar e segurar
+mouseup-> soltar o click
+click-> clicar rapidamente
+mouseout-> mouse fora do elemento
+--------------------------------------------------------------------------------------------
+FUNÇAO
+function name(parametros){
+Bloco
+}
+--------------------------------------------------------------------------------------------
+SEQUÊNCIAS
+var n =3
+n+=2
+window.alert(n)=5
+--------------------------------------------------------------------------------------------
+CONDIÇÕES
+**desvio condicional
+if(condição) esquerda ** {cria um bloco} como se fosse um TRUE
+      else - direito  ** {cria um bloco} como se fosse um FALSE
+--------------------------------------------------------------------------------------------
+//Tipos do Condições
+
+if(condição){
+	true		CONDIÇÃO SIMPLES
+}
+--------------------------------------------------------------------------------------------
+if(condição{
+	true
+}else{			CONFIÇÃO COMPOSTA
+	false
+}
+--------------------------------------------------------------------------------------------
+switch(expressão){
+	case valor1:		CONDIÇÃO MULTIPLA
+		bloquinho
+		break
+	case valor2:
+		bloquinho			break é obrigatorio, no default é opicinal mas é bom colocar
+		break
+	case valor3:
+		bloquinho
+		break
+	default: padrão
+		bloquinho
+		break
+}			
+--------------------------------------------------------------------------------------------
+while (condição){			
+	bloco		REPETIÇÃO NO INICIO		faz o teste e depois o bloco
+}
+--------------------------------------------------------------------------------------------
+do {
+	bloco
+	while(condição){		REPETIÇÃO NO FINAL		faz o bloco depois o teste
+	
+	}
+}
+--------------------------------------------------------------------------------------------
+estrutura de repetição co variavel de controle
+
+faz 3 coisas: inicialização, teste logico e incremento
+
+for(inicio; teste; incremento){
+		bloco
+}
+--------------------------------------------------------------------------------------------
+variavel simples -> so armazena um valor por vez
+var n=8 -> só 8
+
+variavél composta -> varios valores numa mesma estrutura			ARRAY	ou VETOR
+var auto=[0,1,2,3,4] -> de 0a4
+
+elemento do vetor ocupa espaço da memoria, o valor colocado e o indice
+-------------------------------------------------------------------------------------------
+let.push(7) ->acrescenta valor 7 a ultima posição
+let.length ->quantidade de elementos no array
+-------------------------------------------------------------------------------------------
+num=[5,6,4,2,1]
+
+for(let pos    in     num){
+	console.log(num[pos])			para cada posição dentro de NUM
+}
+-------------------------------------------------------------------------------------------
+num.indexOf(4)	-> vai buscar no array onde está o valor 4.	vai retornar [2]
+num.indexOf(3)	-> vai buscar e retornar -1 porque nao tem valor 3 em nenhuma posição
+-------------------------------------------------------------------------------------------
+FUNÇÕES
+
+ações sao executadas por chamadas ou por decorrer de evento.
+função pode ter parâmetros e retornar resultados.
+-------------------------------------------------------------------------------------------
+		MATERIAL PARA ESTUDOS
+functions -> mais sobre funções
+POO->programação orientada a OBJETOS
+modularização->
+expressões regulares-> validação de dados -> RegEX
+json-> estrutura de obejtos
+AJAX-> (rolar tela)
+NODEjs
+
+
+
+
+
+
+
+

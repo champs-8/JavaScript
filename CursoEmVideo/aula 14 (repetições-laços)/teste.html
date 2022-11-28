@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body{
+            height: 100%;
+            width: auto;
+            background-color: darkgray;
+        }
+        div h2{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size:20pt;
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color: azure;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.336);
+            
+        }
+        div#dev{
+            text-align: center;
+        }
+        div#dev span{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 15pt;
+        }
+        #dev input#time{
+            width: 200px;
+            height: 25px;
+            margin-left:80px;
+        }
+        #dev input#selecionar{
+            width: 70px;
+            height: 31px;
+        }
+        #resultado{
+            padding-top: 20px ;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 13pt;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Teste de condições e repetições</h2>
+    </div>
+    <div id="dev">
+        <span>Escolha 3 times</span> <br>
+        <input type="text" id="time">
+        <input type="button" id="selecionar" value="Marcar" onclick="teste()">
+    </div>
+    <div id="resultado">
+        Você escolheu os seguintes times: <br>
+    </div>
+    <script src="meu-teste.js"></script>
+</body>
+</html>

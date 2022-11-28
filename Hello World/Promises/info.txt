@@ -1,0 +1,39 @@
+promises são como promessas na vida real, fica a espera de algo
+
+
+para criar uma promessa usa-se classe Promise;
+leva dois argumentos, RESOLVE(solução) e REJECT(erro);
+
+
+
+pode encadear mais processo utilizando o metodo THEN;
+para passar um dado para outra promise, precisa retornar algo.
+
+nos THEN, pode continuar as instruções em linha separadas, ligando-as com um ponto
+
+
+executar e receber dados na promise, use THEN
+
+CATCH serve para tratar os retornos das promises; (erros)
+
+
+a promessa não bloqueia o codigo, o codigo continua executando
+mesmo se uma promessa der errado.
+
+quem tem uma resposta mais rapida, é executada primeiro.
+
+metodo ALL, todas as promessas tem que ser resolvidas para ser executado.
+
+
+
+metodo RACE, quem tiver melhor tempo de retorno será exbido e retornado primeiro
+o primeiro a ser retornado vai encerrar com o metodo;
+se mais de uma promessa a ser validada tiver o mesmo tempo,
+quem tiver sido declarada primeiro ganha.
+
+
+FETCHvai buscar por uma API
+FETCH retorna uma promessa
+retorna uma response.
+vai converter para json.
+

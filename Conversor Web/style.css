@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.842);
+    color: white;
+    width: 100vw;
+    background-image: url(logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+    margin: 35px auto;
+    font-size: 25pt;
+    text-shadow: 1px 1px 2px black;
+}
+.d1 {
+    width: 50vw;
+    height: 15vw;
+    padding: 25px;
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    top: 10vh;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px black;
+    
+}
+.d2 {
+    width: 45vw;
+    height: 12vw;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px;
+    border-radius:inherit;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 2px 2px 5px black;
+}
+.inline-d2 {
+    display:inline-block;
+    position:relative;
+}
+#url {
+    height: 20px;
+    width: 30vw;
+    padding: 5px;
+}
+.d2 select {
+    width: 60px;
+    height: 25px;
+    margin: 5px 0px;
+}
+#formatos {
+    width: 10vw;
+    display: inline-flex;
+    height: 33px;
+}
+#converter {
+    height: 25px;
+    position: relative;
+    display: flex;
+    margin: 10px auto;
+    text-align: center;
+    justify-content: center;
+    width:15vw;
+
+
+
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor web de Fábio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Conversor para download</h2>
+    </header>
+    <main id="main">
+        <section>
+            <div class="d1">
+                <div class="d2">
+                    <input type="url" name="url" id="url" placeholder="Informe o link da mídia" class="inline-d2" class="link">
+                    <select name="formatos" id="formatos" class="inline-d2" required>
+                        <option selected disabled>.format</option>
+                        <option value="mp3">MP3</option>
+                        <option value="mp4a">144p</option>
+                        <option value="240">240p</option>
+                        <option value="360">360p</option>
+                        <option value="480">480p</option>
+                        <option value="720">720p</option>
+                        <option value="1080">1080p</option>
+                        <div class="button-container">
+                            <input type="submit" value="Converter" id="converter" class="btn">
+                        </div>
+                    </select>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

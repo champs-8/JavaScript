@@ -1,0 +1,3 @@
+tudo é components -> elementos da pagina(header, menu)
+no react ,components são para o Js, funçao ou classe
+

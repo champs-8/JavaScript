@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1/2 Object </title>
+</head>
+<body>
+    
+</body>
+<script>
+    let usuary = { //chaves se usa virgula
+        name: 'Fábio',
+        age: 21, 
+        apelido: 'Champ$',
+    };
+    console.log(usuary.age);
+    console.log(usuary);
+
+    //pode acrescentar variaveis dentro do obejto mesmo fora do objeto
+
+    usuary.ano = 2022
+    console.log(usuary);
+
+    //apagando variaveis dentro do object
+    delete usuary.age
+    console.log(usuary);
+
+    //pode adicionar arrays
+    usuary.hobes = ['Música', 'Programar', 'Jogar']
+    console.log(usuary);
+    
+
+    //pode adicionar objetos dentro dos objetos
+    usuary.competencias = {
+        Linguagens: ['JavaScript', 'HTML',' CSS'],
+        Esportes: ['futebol', 'corrida', 'punheta']
+    }
+    console.log(usuary.competencias);
+
+
+    //pode inserir funções dentro de um object
+    let usuary2 = {
+        digaOla: (name) => `Olá ${name}`,
+        cor: 'Ciano'
+    };
+    console.log(usuary2.digaOla('ÇHÄMP$'));
+    
+
+    //pode pegar outras variaveis de outros obejtos
+    let usuary3 = {
+        name: 'Fábio',
+        cor: usuary2.cor 
+    }
+    console.log(usuary3.cor);
+
+
+    //juntando objetos
+    let usuary4 = {
+        name: 'Fábio',
+        age: 21
+    }
+    let extraInfo = {
+        country: 'Brasil',
+        provincy: 'Minas Gerais',
+    }
+    let usuary4Extra = Object.assign({}, usuary4, extraInfo);//precisa armazenar em um variavel
+    //1º objecto alvo, se colocar chaves vazias quer dizer que vai criar um object new.
+    //Se nao, informe em qual objeto será o alvo.
+    //2° os objetos que quer juntar
+    console.log(usuary4Extra);
+    
+
+    //tambem pode ser feito assim...
+    let usuary4Extra2 = {
+        ...usuary4,
+        ...extraInfo, //chama spread, esplhar
+        ...{
+            sexo: 'M',
+            profissão: 'Programdor'
+        }
+    };
+    console.log(usuary4Extra2);
+
+
+    //utilizando variaveis em outro objetos de forma dinamica
+    let nomeVariavel = 'Estado';
+    let usuary5 = {
+        name: 'Irineu',
+        [nomeVariavel]: 'Pará' //usa colchetes para dizer que a propy é uma variavel
+    }
+    console.log(usuary5);
+
+
+    //getters e setters
+    //
+    //
+    //se for querer usar uma função como se fosse uma propriedade, usa-se GET ou SET
+    let usuaryArray = [{
+            name: 'Oswaldo',
+            age: 42
+        }, {
+            name: 'José',
+            age: 50
+        }, {
+            name: 'Luizão',
+            age: 34
+        }, {
+            name: 'Zaira',
+            age: 27
+        }
+    ];
+    console.log(usuaryArray);
+
+    let atual = {
+        position: 0,
+        get current() {
+            return usuaryArray[this.position]; //retorna valor
+        },
+        set current(position) { // quando se usa SET precisa ter um parametro. Define valor
+            this.position = position;
+        },
+        next() {
+            ++this.position;
+        },
+        previous() {
+            --this.position;
+        }
+    };
+    console.log(atual.current);
+    atual.next();
+    console.log(atual.current);
+    atual.next();
+    console.log(atual.current);
+    atual.next();
+    console.log(atual.current);
+    atual.previous();
+    console.log(atual.current);
+    atual.previous();
+    console.log(atual.current);
+    atual.previous();
+    console.log(atual.current);
+
+
+    atual.position = 2
+    console.log(atual.current);
+    atual.position = 3 
+    console.log(atual.current);
+
+
+</script>
+</html>
