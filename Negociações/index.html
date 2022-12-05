@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2? família=Heebo:wght@300&family=Roboto:wght@300;400;700&family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Negociações</title>
+</head>
+<body>
+    <header class="topo"><img src="cifrao.png" width="60"></header>
+    <main class="main">
+        <section class="all">
+            <div class="cadastrar">
+                <h2>Cadastrar Ticker</h2>
+                <label for="ticker"><h4>Ticker</h4></label>
+                <input type="text" name="ticker" id="ticker" class="linha1" placeholder="Ex: VALE3" required>
+
+                <label for="empresa"><h4>Empresa</h4></label>
+                <input type="text" name="empresa" id="empresa" class="linha1" placeholder="Ex: Vale S.A" required>
+
+                <label for="cnpj"><h4>CNPJ</h4></label>
+                <input type="text" name="cnpj" id="cnpj" class="linha1" placeholder="Ex: 00.000.000.0000-00" required> <br>
+
+                <label for="cv"><h4>Tipo</h4></label>
+                <input type="radio" name="cv" id="compra" value="compra" checked>Compra
+                <input type="radio" name="cv" id="venda" value="venda" >Venda
+
+                <label for="dataNeg"><h4 id="dataNegociacao">Data negocioação</h4></label>
+                <input type="date" name="dataNeg" id="dataNeg" required>
+
+                <label for="qtda"><h4>Quantidade</h4></label>
+                <input type="number" name="qtda" id="qtda" required>
+
+                <label for="vUnit"><h4 id="valorUnit">Valor Unitário</h4></label>
+                <input type="number" name="vUnit" id="vUnit" required><br>
+
+
+                <h4>Valor total<div id="valorTotal"></div></h4>
+                
+                <label for="corretora"><h4 id="corret">Corretora</h4></label>
+                <select name="corretora" id="corretora" required>
+                    <option value="corretora" selected disabled>Corretora</option>
+                    <option value="adicionar">Adicionar corretora</option>
+                    <option value="xp">XP</option>
+                    <option value="rico">Rico</option>
+                </select>
+
+                <input type="text" id="outraCorretora" placeholder="Qual o nome da Corretora?">
+                <button><img id="ok" src="ok.png" alt="Ok" onclick="cod.verificarCorretora()"></button>
+                
+                
+
+                <button class="funcoes" onclick="cod.salvar()">Salvar</button>
+                <button type="reset" class="funcoes" onclick="cod.limpar()">Limpar</button>
+                <button class="funcoes" onclick="cod.fechar()">Cancelar</button>
+            </div>
+            <nav class="" id="menu">
+                <button class="linkMenu" id="cadTic" onclick="cod.cadastrar()">Cadastrar ticker</button>
+                <button class="linkMenu" id="listTic">Lista de tickers</button>
+                <button class="linkMenu">algo mais....</button>
+            </nav>
+        </section>
+        <table class="table">
+            <button id="btnMenu"><img src="menu-aberto.png" width="25" alt=""></button>
+            <thead><tr class="topoTable">
+                <th>ID</th>
+                <th>Ticker</th>
+                <th>Empresa</th>
+                <th>CNPJ</th>
+                <th>Tipo</th>
+                <th>Data neogiação</th>
+                <th>Quantidade</th>
+                <th>Valor Unitário</th>
+                <th>Valor total</th>
+                <th>Corretora</th>
+            </tr></thead>
+            <tbody class="corpoTable" id="corpoTable">
+                
+            </tbody>
+                
+        </table>
+        <footer>
+            Todos os direitos reservados &nbsp;&#9415;&nbsp; - 2022 <br>
+            by Fábio Santos || ÇHÄMP$
+        </footer>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

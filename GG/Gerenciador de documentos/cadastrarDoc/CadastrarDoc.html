@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="cadastrarDoc.css">
+    <title>Gerenciador de documentos</title>
+</head>
+<body>
+    <section class="topo">
+        <div class="top" id="nome-empresa">
+            nome e logo
+        </div>
+        <div class="top" id="info-usuario">
+            Bem-vindo...
+        </div>
+        <div class="top" id="atalhos">
+            <a href="main.html"> <img src="../casinha.png" alt="home"></a>
+            <a href="#"><img src="../editar.png" alt="editar"></a>
+            <a href="#"><img src="../ferramenta.png" alt="Configurações"></a>
+            <a href="#"><img src="../sair.png" alt="sair"></a>
+        </div>
+    </section>
+    <main>
+        <aside>
+            <nav class="menu">
+                <ul>
+                    <li class="ativo"><a href="CadastrarDoc.html">Cadastrar documento</a></li>
+                    <li><a href="../tipoDoc/tipoDoc.html">Cadastrar tipo de documento</a></li>
+                    <li><a href="../cadastrarUsuario/cadastrarUsuario.html">Cadastrar usuário</a></li>
+                    <li><a href="../permissao/permissao.html">Cadastrar permissão</a></li>
+                    <li><a href="#">Listar documentos</a></li>
+                    <li><a href="#">Listar tipo de documento</a></li>
+                    <li><a href="/listarUsuario/listarUsuario.html">Listar usuário</a></li>
+                    <li><a href="#">Listar LOG</a></li>
+                    <li><a href="../Repositorio de pastas/repositorio.html">Repositórios</a></li>
+                    <li><a href="#">Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="main" id="main">
+            <div class="content">
+                <h2>CADASTRAR DOCUMENTOS</h2>
+                <h4>Nome:</h4> 
+                <input type="text" name="namedoc" id="namedoc">
+                <h4>Tipo de documento: </h4>
+                <select name="tipodoc" id="tipodoc">
+                    <option value="formularioDeCadastro">Formulário de cadastro</option>
+                </select>
+                <h4>Público acessível: </h4>
+                <select name="publico" id="publico">
+                    <option value="publicoAcessivel">Público</option>
+                </select>
+                <span class="inline"><h4>Documento: </h4><input type="file" name="file" id="file"></span>
+            </div>
+            <div class="inline-butoes">
+                <input type="button" name="registrar" id="registrar" value="Registrar" class="butoes">
+                <input type="button" name="limpar" id="limpar" value="Limpar" class="butoes">
+                <input type="button" name="cancelar" id="cancelar" value="Cancelar" class="butoes">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

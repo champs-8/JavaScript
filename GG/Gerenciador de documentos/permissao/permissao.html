@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="permissao.css">
+    
+    <title>Gerenciador de documentos</title>
+</head>
+<body>
+    <section class="topo">
+        <div class="top" id="nome-empresa">
+            nome e logo
+        </div>
+        <div class="top" id="info-usuario">
+            Bem-vindo...
+        </div>
+        <div class="top" id="atalhos">
+            <a href="../main.html"> <img src="../casinha.png" alt="home"></a>
+            <a href="#"><img src="../editar.png" alt="editar"></a>
+            <a href="#"><img src="../ferramenta.png" alt="Configurações"></a>
+            <a href="#"><img src="../sair.png" alt="sair"></a>
+        </div>
+    </section>
+    <main>
+        <aside>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../cadastrarDoc/CadastrarDoc.html">Cadastrar documento</a></li>
+                    <li><a href="../tipoDoc/tipoDoc.html">Cadastrar tipo de documento</a></li>
+                    <li><a href="../cadastrarUsuario/cadastrarUsuario.html">Cadastrar usuário</a></li>
+                    <li class="ativo"><a href="permissao.html">Cadastrar permissão</a></li>
+                    <li><a href="listaDoc.html">Listar documentos</a></li>
+                    <li><a href="listaTipoDoc.html">Listar tipo de documento</a></li>
+                    <li><a href="/listarUsuario/listarUsuario.html">Listar usuário</a></li>
+                    <li><a href="listaLog.html">Listar LOG</a></li>
+                    <li><a href="../Repositorio de pastas/repositorio.html">Repositórios</a></li>
+                    <li><a href="configuracoes.html">Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="main" id="main">
+            <div class="content">
+                <h2>CADASTRAR PERMISSÃO</h2>
+                <label for="user_name"><h4>Nome de usuário:</h4></label>
+                <select name="select_user" id="user_name"></select>
+                <div id="opcao">
+                    <label for="cadastrarUsuario" class="opcao"><span>Cadastrar usuários<input type="checkbox" id="cadastrarUsuario"></span></label>
+                    <label for="cadastrarDocumento" class="opcao"><span>Cadastrar documento<input type="checkbox" id="cadastrarDocumento"></span></label>
+                    <label for="cadastrarTipoDocumento" class="opcao"><span>Cadastrar tipo de documento<input type="checkbox" id="cadastrarTipoDocumento"></span></label>
+                    <label for="listarUsuario" class="opcao"><span>Listar usuário<input type="checkbox" id="listarUsuario"></span></label>
+                    <label for="listarTipoDocumentos" class="opcao"><span>Listar tipo de documentos<input type="checkbox" id="listarTipoDocumentos"></span></label>
+                    <label for="listarDocumentos" class="opcao"><span>Listar documentos<input type="checkbox" id="listarDocumentos"></span></label>
+                    <label for="log" class="opcao"><span>Lista LOG<input type="checkbox" id="log"></span></label>
+                    <label for="permissoes" class="opcao"><span>Permissões de acessos<input type="checkbox" id="permissoes"></span></label>
+                    <label for="configuracoes" class="opcao"><span>Configurações<input type="checkbox" id="configuracoes"></span></label>
+                </div>
+            </div>
+            <div class="inline-butoes">
+                <input type="button" name="registrar" id="registrar" value="Registrar" class="butoes">
+                <input type="button" name="limpar" id="limpar" value="Limpar" class="butoes">
+                <input type="button" name="cancelar" id="cancelar" value="Cancelar" class="butoes">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/listarUsuario/listarUsuario.css">
+    
+    <title>Gerenciador de documentos</title>
+</head>
+<body>
+    <section class="topo">
+        <div class="top" id="nome-empresa">
+            nome e logo
+        </div>
+        <div class="top" id="info-usuario">
+            Bem-vindo...
+        </div>
+        <div class="top" id="atalhos">
+            <a href="../main.html"> <img src="../casinha.png" alt="home"></a>
+            <a href="#"><img src="../editar.png" alt="editar"></a>
+            <a href="#"><img src="../ferramenta.png" alt="Configurações"></a>
+            <a href="#"><img src="../sair.png" alt="sair"></a>
+        </div>
+    </section>
+    <main>
+        <aside>
+            <nav class="menu">
+                <ul>
+                    <li><a href="/cadastrarDoc/CadastrarDoc.html">Cadastrar documento</a></li>
+                    <li><a href="/tipoDoc/tipoDoc.html">Cadastrar tipo de documento</a></li>
+                    <li><a href="/cadastrarUsuario/cadastrarUsuario.html">Cadastrar usuário</a></li>
+                    <li><a href="/permissao/permissao.html">Cadastrar permissão</a></li>
+                    <li><a href="listaDoc.html">Listar documentos</a></li>
+                    <li><a href="listaTipoDoc.html">Listar tipo de documento</a></li>
+                    <li class="ativo"><a href="listarUsuario.html">Listar usuário</a></li>
+                    <li><a href="listaLog.html">Listar LOG</a></li>
+                    <li><a href="/Repositorio de pastas/repositorio.html">Repositórios</a></li>
+                    <li><a href="configuracoes.html">Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="main" id="main">
+            <div class="content">
+                <h2>Listar usuário</h2>
+                <div>
+                    <input type="search" name="pesquisa" id="pesquisa" class="inline">
+                    <button type="submit" id="btnPesquisa" class="inline">Pesquisar</button>
+                </div>
+                <table>
+                    <thead><tr>
+                        <th class="c1">Código</th>
+                        <th class="c2">Nome</th>
+                        <th class="c3">Login</th>
+                        <th class="c4">Perfil</th>
+                        <th class="c5">Ações</th>
+                    </tr></thead>
+                    <tbody><tr>
+                        <td class="c1">0</td>
+                        <td class="c2">Administrador</td>
+                        <td class="c3">admin</td>
+                        <td class="c4">ADM</td>
+                        <td class="c5">editar delete</td>
+                    </tr>
+                    <tr>
+                        <td class="c1">1</td>
+                        <td class="c2">Administrador</td>
+                        <td class="c3">admin</td>
+                        <td class="c4">ADM</td>
+                        <td class="c5">editar delete</td>
+                    </tr>
+                    <tr>
+                        <td class="c1">2</td>
+                        <td class="c2">Administrador</td>
+                        <td class="c3">admin</td>
+                        <td class="c4">ADM</td>
+                        <td class="c5">editar delete</td>
+                    </tr>
+                    <tr>
+                        <td class="c1">3</td>
+                        <td class="c2">Administrador</td>
+                        <td class="c3">admin</td>
+                        <td class="c4">ADM</td>
+                        <td class="c5">editar delete</td>
+                    </tr></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

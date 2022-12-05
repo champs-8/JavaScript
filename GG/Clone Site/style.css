@@ -1,0 +1,592 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: rgba(0, 0, 0, 0.808);
+
+}
+a {
+    color: white;
+}
+
+/* Contatos masters */
+.contatoMaster {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+#uniaoDosContatos {
+    margin: 5px 15px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.udc {
+    display:inline-flex;
+    width: 100%;
+}
+#contNor {
+    left: 0;
+    text-align: center;
+    position: relative;
+
+}
+.telefone, .email, .redesSociais{
+    margin: 0px 5px;
+}
+#rSoc {
+    position: relative;
+    justify-content: end;
+}
+.udc span {
+    display: inline;
+}
+
+
+
+
+
+/* formatação da parte principal */
+
+
+.fundoPrin {
+    background-image: url(/midias/fundo.jpg);
+    height: 100vh;
+    background-position:cover;
+}
+.topo {
+    display: flex;
+    position: relative;
+}
+#tp {
+    top: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 7px 10px;
+    width: 100%;
+}
+#logo, .menu {
+    display: inline-flex;
+}
+#logo img {
+    width: max-content;
+    height: max-content;
+}
+.navBar a {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 2px;
+    color: inherit;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+.navBar a.active, .navBar a:hover {
+    border-bottom:  2px solid white;
+    transition: .5s ease;
+}
+.list { 
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.menu {
+    padding: 5px;
+    position: relative;
+    float: right;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+#iconMenu {
+    color: inherit;
+    font-size: 25px;
+    float: right;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+.toggleBar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin:  5px auto;
+    -webkit-transition: all .3s ease-in-out ;
+    transition: all .3s ease-in-out;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    body {
+        width:100vmax;
+    }
+    .contatoMaster {
+        display: none;
+    }
+    .cartaoVisita {
+        display:block;
+        width: max-content;
+        height: auto;
+        justify-content: center;
+    }
+    .cVInline {
+        display: block;
+        width: auto;
+        height: auto;
+    }
+    .cartoes {
+        display: block;
+        width: min-content;
+
+    }
+    #iconMenu.active  .toggleBar:nth-child(1){
+        transform: translateY(8px) rotate(135deg);
+    }
+    #iconMenu.active  .toggleBar:nth-child(2){
+        opacity: 0;
+    }
+    #iconMenu.active  .toggleBar:nth-child(3){
+        transform: translateY(-8px) rotate(-135deg);
+    }
+    nav #iconMenu{
+        display: block;
+    }
+    .navBar ul {
+        position: fixed;
+        display: none;
+        width: 25vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.801);
+        top: -21px;
+        right: -100%;
+        text-align: center;
+        transition: .5s;
+    }
+    .navBar ul.active {
+        right: -30%;
+        display: block;
+    }
+    nav li {
+        display:block;
+        position: relative;
+        top: 70px;
+        width: 100%;
+        height: 30px;
+        color: #fff;
+        margin: 20px 0;
+        line-height: 20px;
+        transition: .1s ease;
+    }
+    nav li:hover {
+        transform: scale(1.1);
+    }
+    nav a {
+        font-size: 15px;
+    }
+    a.active, a:hover {
+        border: none;
+        color: #fff;
+    }
+    .principal {
+        transform: scale(.65);
+        display: flex;
+        position: relative;
+        left: 50px;
+        top:100px;
+    }   
+}
+
+#logo {
+    position: relative;
+    left: 3%;
+}
+#logo img{
+    width: 80px;
+}
+
+.inline {
+    display: flex;
+}
+.principal {
+    display: flex;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 80vw;
+    padding: 10px;
+    justify-content: center;
+}
+#butoesDoTopo {
+    display: flex;
+    justify-content:center;
+}
+#butoesDoTopo a {
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+.icones {
+    color: white;
+}
+span.icones {
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+}
+i {
+    padding: 0px 5px;
+    position: relative;
+    top: 1px;
+}
+@media (max-width: 768px) {
+}
+#pr h1 {
+    position: relative;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    padding: 8px 0;
+    color: white;
+}
+#pr a {
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 6px 15px ;
+    margin: 0 10px;
+}
+#pr #chamado {
+    background-color: rgba(16, 16, 192, 0.938);
+    border: none;
+}
+
+/* configurando cartão visita */
+.cartaoVisita {
+    display: flex;
+    width: 100%;
+    padding: 8.5vh 0;
+    background-color: rgb(250, 250, 250);
+    justify-content: center;
+}
+.cVInline {
+    display: inline-flex;
+    width: max-content;
+
+}
+.cartoes {
+    display: flex;
+    width: 12rem;
+    height: 13rem;
+    justify-content: center;
+}
+.cartoes .c {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9rem;
+    height: 9.2rem;
+    text-align: center;
+}
+.c a {
+    display: flex;
+    position: relative;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 5rem;
+    left: 50%;
+}
+.c i{
+    padding: 0;
+}
+.fa-circle {
+    color: orange;
+    display: block;
+    position: absolute;
+    font-size: 4.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: -1px 4px 10px rgba(145, 145, 145, 0.575);
+    transition: .2s;
+}
+
+.fa-circle:hover {
+    text-shadow: none;
+}
+.fa-plus {
+    color: white;
+    display: block;
+    height: max-content;
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .2s ease;
+}
+.fa-plus::before {
+    height: max-content;
+}
+.cText {
+    width: 100%;
+    display: block;
+}
+.cText h1 {
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.cText p {
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: .7rem;
+}
+
+/* Atendemos  */
+
+.contato { 
+    display: block;
+    width: inherit;
+    height: 8rem;
+    justify-content: center;
+    margin: auto;
+    background-image: linear-gradient(to right, rgba(16, 16, 150, 0.938), rgba(0,0,0,.808));
+
+}
+.middleContato {
+    width: 98vw;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    position: relative;
+    top: 3rem;
+    justify-content: space-between; 
+}
+#div1contato{
+    display: flex;
+    position: relative;
+    width: max-content;
+    height: auto;
+    margin-left: 3rem;
+}
+#div1contato h2 {
+    display: block;
+    width: max-content;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;;
+    color: #fff;
+}
+#div2contato {
+    display: flex;
+    right: 1rem;
+    width: inherit;
+    justify-content: right;
+    margin-right: 5rem;
+}
+#btnContato {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    background-color: rgba(16, 16, 192, 0.938);
+}
+
+/* sobre */
+
+.sobre {
+    display: flex;
+    width: inherit;
+    height: 80vh;
+    background-color: rgb(250,250,250);
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;;
+    font-weight: 300;
+}
+#sobre1 {
+    display: flex;
+    width: inherit;
+    margin: auto;
+    justify-content: space-evenly;
+}
+#sobre1 a {
+    background-color: #193498;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 8pt;
+    margin: 10px;
+    width:80px;
+    height: 30px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: inline-flex;
+    
+}
+#sobre2 {
+    width: 40vw;
+    height: auto;
+    display: block;
+    margin: auto 30px;
+    text-align: center;
+}
+#sobre3 {
+    display: block;
+    width: fit-content;
+    right: auto;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+}
+#sobre3 img {
+    width:250px;
+    margin: 0;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+#sobre3::after {
+    content: '';
+    border: 7px solid #193498;
+    display: block;
+    width: 18vw;
+    height: 70vh;
+    top: 20px;
+    left: 20px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgb(134, 134, 134);
+}
+
+/* contadores */
+.contadores {
+    display: block;
+    height: auto;
+    background-color: rgb(250, 250, 250);
+}
+#msgContadores {
+    display: flex;
+    justify-content: center;
+    font-size: 15pt;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+.contadoresColumn {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+#contador1, #contador2, #contador3 {
+    display: flex;
+    justify-content: center;
+    font-size: 10pt;
+    width: 10em;
+    height: 10em;
+}
+#contador1, #contador2, #contador3, span {
+    display: block;
+    text-align: center;
+}
+.contadoresColumn h3 {
+    align-items: center;
+    padding-top: 15px;
+}
+
+
+/* equipe */
+
+.equipe {
+    display: block;
+    height: auto;
+    padding: 10px 0;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+}
+.titleEquipe {
+    display: block;
+}
+.titleEquipe h5 {
+    padding: 10px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+.titleEquipe h2{
+    padding: 10px;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+.titleEquipe p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12pt;
+    padding: 10px;
+}
+.quadroEquipe {
+    display: flex;
+    padding: 5px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.funcionario {
+    width: 20vw;
+    padding: 5px;
+}
+.funcionario img {
+    width: 8em;
+}
+.funcionario h4 {
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    padding: 5px;
+}
+.funcionario  p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10pt;
+    font-weight: 300;
+    padding: 5px;
+}
+
+/* footer */
+
+.contentFooter {
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.contentFooter .divFooter {
+    width: 25vw;
+    height: 25vh;
+    border: 1px solid rgba(204, 204, 204, 0.178);
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+
+/* butao fixo footer */
+#btnLigamos {
+    position: fixed;
+    height: 30px;
+    width: 130px;
+    left: 2rem;
+    top: 93.5vh;
+    font-size: 12px;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    color: white;
+    background-color: #193498;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+}
+.fa-phone-volume {
+    display: flex;
+    top: 3px;
+}
+#call {
+    position: absolute;
+    display: inline-flex;
+    top: 20%;
+    left: 10%;
+}

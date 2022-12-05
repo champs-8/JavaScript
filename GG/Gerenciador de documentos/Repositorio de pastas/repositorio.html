@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="repositorio.css">
+    
+    <title>Gerenciador de documentos</title>
+</head>
+<body>
+    <section class="topo">
+        <div class="top" id="nome-empresa">
+            nome e logo
+        </div>
+        <div class="top" id="info-usuario">
+            Bem-vindo...
+        </div>
+        <div class="top" id="atalhos">
+            <a href="../main.html"> <img src="../casinha.png" alt="home"></a>
+            <a href="#"><img src="../editar.png" alt="editar"></a>
+            <a href="#"><img src="../ferramenta.png" alt="Configurações"></a>
+            <a href="#"><img src="../sair.png" alt="sair"></a>
+        </div>
+    </section>
+    <main>
+        <aside>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../cadastrarDoc/CadastrarDoc.html">Cadastrar documento</a></li>
+                    <li><a href="../tipoDoc/tipoDoc.html">Cadastrar tipo de documento</a></li>
+                    <li><a href="../cadastrarUsuario/cadastrarUsuario.html">Cadastrar usuário</a></li>
+                    <li><a href="../permissao/permissao.html">Cadastrar permissão</a></li>
+                    <li><a href="../listaDoc.html">Listar documentos</a></li>
+                    <li><a href="../listaTipoDoc.html">Listar tipo de documento</a></li>
+                    <li><a href="/listarUsuario/listarUsuario.html">Listar usuário</a></li>
+                    <li><a href="../listaLog.html">Listar LOG</a></li>
+                    <li class="ativo"><a href="repositorio.html">Repositórios</a></li>
+                    <li><a href="../configuracoes.html">Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="main" id="main">
+            <div class="content">
+                <h2>REPOSITÓRIOS DE PASTAS</h2>
+                <div id="opcao">
+                    <button class="repoBtn" onclick="filtro()" id="btnFiltro"><img src="../filtro.png"> Filtro</button>
+                    <button class="repoBtn" id="btnAdd"><img src="../adicionar.png"> Adicionar</button>
+                    <button class="repoBtn" id="btnEdi"><img src="../editarRepo.png"> Editar</button>
+                    <input type="text" name="pesquisar" id="pesquisar">
+                </div>
+                <div class="pastas">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div id="filtro">
+                        <label for="ordem"><h4>Ordem: </h4>
+                        <select name="ordem" id="ordem"></label>
+                            <option value="Ordem" disabled selected>Ordem</option>
+                            <option value="dataCrescente">Data Crescente</option>
+                            <option value="dataDecrescente">Data Decrescente</option>
+                            <option value="az">A - Z</option>
+                            <option value="za">Z - A</option>
+                        </select>
+    
+                    </div>
+                </div>
+                
+                
+            </div>
+            <!-- <div class="inline-butoes">
+                <input type="button" name="registrar" id="registrar" value="Registrar" class="butoes">
+                <input type="button" name="limpar" id="limpar" value="Limpar" class="butoes">
+                <input type="button" name="cancelar" id="cancelar" value="Cancelar" class="butoes">
+            </div> -->
+        </section>
+    </main>
+</body>
+<script>
+     
+
+    //verificar posição atual do top da rolagem
+
+    // const x = setInterval(() => {
+    //     let posiTop = document.querySelector('.pastas').scrollTop;
+    //     console.log(posiTop);
+    // },100);  
+    
+    
+    //aqui fazemos de interação toggle
+    function filtro(){
+        if(document.querySelector('#filtro').classList.contains('filtro')) {
+            document.querySelector('#filtro').classList.remove('filtro');
+            document.querySelector('#filtro').classList.add('filtroReverse');
+            setTimeout(document.getElementsByClassName('filtroReverse').classList.remove('filtroReverse'),500);
+            
+
+        }
+        document.querySelector('#filtro').classList.remove('filtroReverse');
+        const posiTop = document.querySelector('.pastas').scrollTop;
+
+        const toggleClass = (el, className) => el.classList.toggle(className);
+        toggleClass(document.querySelector('#filtro'), 'filtro');   
+
+        let divFiltro = document.querySelector('#filtro').className;
+        console.log(divFiltro);
+
+        if(divFiltro == 'filtro') {
+            document.querySelector('#filtro').style.display = 'block';
+            document.querySelector('.pastas').style.overflow = 'hidden';
+            document.querySelector('#filtro').style.top = `${posiTop}px`;            
+        } else {
+            document.querySelector('#filtro').style.display = 'none';
+            document.querySelector('.pastas').style.overflow = 'scroll';
+            
+        };   
+        
+        
+    }
+</script>
+</html>

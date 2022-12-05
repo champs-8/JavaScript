@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="cadastrarUsuario.css">
+    
+    <title>Gerenciador de documentos</title>
+</head>
+<body>
+    <section class="topo">
+        <div class="top" id="nome-empresa">
+            nome e logo
+        </div>
+        <div class="top" id="info-usuario">
+            Bem-vindo...
+        </div>
+        <div class="top" id="atalhos">
+            <a href="main.html"> <img src="../casinha.png" alt="home"></a>
+            <a href="#"><img src="../editar.png" alt="editar"></a>
+            <a href="#"><img src="../ferramenta.png" alt="Configurações"></a>
+            <a href="#"><img src="../sair.png" alt="sair"></a>
+        </div>
+    </section>
+    <main>
+        <aside>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../cadastrarDoc/CadastrarDoc.html">Cadastrar documento</a></li>
+                    <li><a href="../tipoDoc/tipoDoc.html">Cadastrar tipo de documento</a></li>
+                    <li class="ativo"><a href="cadastrarUsuario.html">Cadastrar usuário</a></li>
+                    <li><a href="../permissao/permissao.html">Cadastrar permissão</a></li>
+                    <li><a href="listaDoc.html">Listar documentos</a></li>
+                    <li><a href="listaTipoDoc.html">Listar tipo de documento</a></li>
+                    <li><a href="/listarUsuario/listarUsuario.html">Listar usuário</a></li>
+                    <li><a href="listaLog.html">Listar LOG</a></li>
+                    <li><a href="../Repositorio de pastas/repositorio.html">Repositórios</a></li>
+                    <li><a href="configuracoes.html">Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="main" id="main">
+            <div class="content">
+                <h2>CADASTRAR USUÁRIO</h2>
+                <label for="nomeUsuario"><h4>Nome:</h4></label>
+                <input type="text" id="nomeUsuario" required>
+                <label for="emailUsuario"><h4>Email:</h4></label>
+                <input type="text" id="emailUsuario" required>
+                <label for="senhaUsuario"><h4>Senha:</h4></label>
+                <input type="password" name="senhaUsario" id="senhaUsuario" required>
+                <label for="obsUsuario"><h4>Sobre o usuário:</h4></label>
+                <textarea name="obsUsuario" id="obsUsuario" cols="30" rows="5" placeholder="Observações"></textarea>
+            </div>
+            <div class="inline-butoes">
+                <input type="button" name="registrar" id="registrar" value="Registrar" class="butoes">
+                <input type="button" name="limpar" id="limpar" value="Limpar" class="butoes">
+                <input type="button" name="cancelar" id="cancelar" value="Cancelar" class="butoes">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

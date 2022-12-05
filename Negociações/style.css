@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.topo {
+    height: 40px;
+    padding: 10px;
+}
+.topo img {
+    margin: 0 20px;
+}
+body {
+    background-color: #202124;  /* maravilhosa */
+    color: white;
+    font-family: 'Heebo', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.main {
+    background-color: darkgrey;
+    width: 100%;
+    height: 0;
+}
+.all {
+    position: relative;
+    width: 100vw;
+
+}
+.menu {
+    background-color: #ff006267;
+    width: 20vw;
+    height: 530px;
+    overflow: hidden;
+    position: absolute;
+    top: 34px;
+    margin: auto 0;
+    align-items: center;
+
+    animation: openMenu ease .4s;
+}
+@keyframes openMenu {
+    from {
+        left: -20vw;
+    }
+    to {
+        left: 0;
+    }
+}
+.menu button {
+    color: wheat;
+    font-size: 12pt;
+    height: 30px;
+    position: relative;
+    width: 150px;
+    margin: 35px 50%;
+    justify-content: center;
+    align-items: center;
+    top: 35%;
+    transform: translate(-50%);
+}
+.menu button:hover {
+    background-color: #ff006234;
+    border-radius: 5px;
+}
+.table .topoTable{
+    position: absolute;
+    width: 100%;
+    background-color: darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table th {
+    padding: 0px 15px;
+    position: relative;
+}
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+button img {
+    position: absolute;
+    left: 50px;
+    top: 83px;
+    z-index: 1;
+}
+.topoTable {
+    height: 30px;
+}
+footer {
+    position: absolute;
+    display: flex;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.cadastrar {
+    z-index: 1;
+    width: 85vw;
+    height: 80vh;
+    position: absolute;
+    background-color:rgba(198, 216, 231, 0.9);
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    color: black;
+    animation: cadastrar ease .3s;
+    box-shadow: 2px 2px 5px rgba(198, 216, 231, 0.9);
+}
+
+@keyframes cadastrar {
+    from {
+        top: -90vh;
+    }
+    to {
+        top: 0;
+    }
+}
+.cadastrar .funcoes {
+    width: 80px;
+    background-color: #20212470;
+    height: 25px;
+    border-radius: 5px;
+    position:relative;
+    left: 7vw;
+    top: 55%;
+    transform: translateX(-50%);
+    display:inline;
+    margin: 0 20px;
+}
+.cadastrar input{
+    width: 250px;
+    height: 25px;
+    margin: 10px;
+}
+.cadastrar input[type='checkbox']{
+    width: 20px;
+    top: 6px;
+    left: 5px;
+    position: relative;
+    margin: 0 10px;
+}
+.cadastrar h2 {
+    text-align: center;
+    position: relative;
+    transform: translateX(-50%);
+    margin: 20px;
+    left: 50%;
+}
+.cadastrar h4 {
+    width: 80px;
+    text-align: right;
+    padding: 0;
+    display: inline-block;
+}
+#ticker {
+    width: 80px;
+}
+#dataNegociacao {
+    width: 150px;
+    margin-left: 15px;
+}
+#dataNeg {
+    width: 110px;
+    margin-right: 10px;
+}
+#qtda {
+    width: 50px;
+    margin-left: 10px;
+}
+#valorTotal {
+    width: 80px;
+    height: 25px;
+    background-color: white;
+    position: relative;
+    left: 90px;
+    top: -22px;
+}
+#valorUnit {
+    width: 150px;
+}
+#vUnit {
+    width: 100px;
+}
+#corretora {
+    width: 150px;
+    position: relative;
+    left: 150px;
+    margin: 15px;
+    height: 25px;
+    z-index: 2;
+}
+#corret {
+    position: relative;
+    left: 150px;
+}
+#compra, #venda {
+    width: 30px;
+    margin: 0 5px;
+    top: 7px;
+    position: relative;
+}
+#outraCorretora {
+    width: 180px;
+    height: 22px;
+    z-index: 1;
+    position: absolute;
+    margin: 0;
+    left: 500px ;
+    top: 180px;
+    display: none;
+}
+#ok {
+    width: 20px;
+    position: relative;
+    top: 5px;
+    left: 335px;
+    display: none;
+}
