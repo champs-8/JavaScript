@@ -1,0 +1,3 @@
+main vai criar um html que queira montar seu formulario;
+no body, insira {{{body}}} para que o arquivo que carregado na pasta views
+seja carregado pelo corpo no handlebars;
